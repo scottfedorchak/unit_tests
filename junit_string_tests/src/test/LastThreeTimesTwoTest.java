@@ -15,7 +15,7 @@ public class LastThreeTimesTwoTest {
     public void testRepeatedThreeTimes(){
         String testString = "testing";
         String result = threeTimes.lastThreeRepeated(testString);
-        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "inginging", result);
+        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "inging", result);
     }
 
     @Test(expected=StringIndexOutOfBoundsException.class)
@@ -36,13 +36,13 @@ public class LastThreeTimesTwoTest {
     public void testThreeCharOnly(){
         String testString = "Ivy";
         String result = threeTimes.lastThreeRepeated(testString);
-        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "IvyIvyIvy", result);
+        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "IvyIvy", result);
     }
 
     @Test
     public void testSpecialChar(){
         String testString = "%^~@*";
         String result = threeTimes.lastThreeRepeated(testString);
-        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "~@*~@*~@*", result);
+        Assert.assertEquals("ERROR: expected the last 3 chars of " + testString + " to be repeated.", "~@*~@*", result);
     }
 }

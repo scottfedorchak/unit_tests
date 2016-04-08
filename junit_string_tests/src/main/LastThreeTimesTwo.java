@@ -7,6 +7,10 @@ public class LastThreeTimesTwo {
 
     public String lastThreeRepeated(String input){
         String lastThree = input.substring((input.length() - 3));
-        return lastThree + lastThree + lastThree;
+        String result = lastThree + lastThree;
+
+        System.out.println("INFO: last 3 repeated result = " + result);
+
+        return result;
     }
 }
